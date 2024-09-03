@@ -190,7 +190,7 @@ void drawRoute(const std::vector<Node>& route, Bitmap& bmp)
 int main()
 {
 	auto bmp = Bitmap();
-	bmp.readFile(R"(C:\Users\korth\Documents\Code\LeetCode\Cpp\Astar\AStar2.bmp)");
+	bmp.readFile(R"(C:\Users\korth\Documents\Code\Cpp\Astar\AStar2.bmp)");
 
 	auto occupied = OccupancyMap(bmp);
 	auto start = Node(1, 1, Direction::North);
@@ -200,7 +200,7 @@ int main()
 	auto route = getRoute(costMap, goal);
 
 	drawRoute(route, bmp);
-	bmp.writeFile(R"(C:\Users\korth\Documents\Code\LeetCode\Cpp\Astar\AStar2Output.bmp)");
+	bmp.writeFile(R"(C:\Users\korth\Documents\Code\Cpp\Astar\AStar2Output.bmp)");
 
 	std::cout << costMap[goal].cost << std::endl;
 }
